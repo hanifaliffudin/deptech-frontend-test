@@ -25,7 +25,6 @@ const EditCategory = ({ params }: { params: { id: string } }) => {
         name,
         description,
       });
-      console.log(res);
       toast({
         title: "Success",
       });
@@ -60,7 +59,7 @@ const EditCategory = ({ params }: { params: { id: string } }) => {
       editData();
       console.log("Form submitted successfully!");
     } else {
-      console.log("Form has errors. Please correct them.");
+      alert("Form has errors. Please correct them.");
     }
   };
 
@@ -69,8 +68,6 @@ const EditCategory = ({ params }: { params: { id: string } }) => {
       setIsLoading(true);
       try {
         const data = await fetchDetailCategory(params.id);
-
-        console.log(data);
 
         setName(data.name);
         setDescription(data.description);

@@ -1,7 +1,6 @@
 "use client";
 
 import { fetchDetailTransaction } from "@/app/api/transactions";
-import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -11,7 +10,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ArrowLeftIcon } from "lucide-react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -23,7 +21,6 @@ const DetailCategory = ({ params }: { params: { id: string } }) => {
     const getDetail = async () => {
       try {
         const data = await fetchDetailTransaction(params.id);
-        console.log(data);
         setData(data);
       } catch (error) {
         console.error(error);
@@ -32,8 +29,6 @@ const DetailCategory = ({ params }: { params: { id: string } }) => {
 
     getDetail();
   }, []);
-
-  console.log(data);
 
   return (
     <div className="p-4">

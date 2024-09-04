@@ -1,0 +1,16 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "firstName": "Default",
+      "lastName": "Admin",
+      "email": "default@admin.com",
+      "dateOfBirth": "1999-08-17",
+      "gender": "Male",
+      "password": "password"
+    }
+  ],
+  "productCategories": [],
+  "products": [],
+  "transactions": []
+}

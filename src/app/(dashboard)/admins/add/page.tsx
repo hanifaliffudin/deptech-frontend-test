@@ -92,7 +92,7 @@ const AddAdmin = () => {
       addData();
       console.log("Form submitted successfully!");
     } else {
-      console.log("Form has errors. Please correct them.");
+      alert("Form has errors. Please correct them.");
     }
   };
 

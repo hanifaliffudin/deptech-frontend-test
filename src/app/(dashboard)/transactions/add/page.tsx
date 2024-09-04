@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchEditProduct, fetchListProducts } from "@/app/api/products";
+import { fetchListProducts } from "@/app/api/products";
 import { fetchAddTransaction } from "@/app/api/transactions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -70,7 +70,7 @@ const AddTransaction = () => {
       addData();
       console.log("Form submitted successfully!");
     } else {
-      console.log("Form has errors. Please correct them.");
+      alert("Form has errors. Please correct them.");
     }
   };
 

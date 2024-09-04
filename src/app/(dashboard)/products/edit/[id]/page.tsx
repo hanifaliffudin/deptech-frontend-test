@@ -40,7 +40,6 @@ const EditProduct = ({ params }: { params: { id: string } }) => {
         category,
         stock,
       });
-      console.log(res);
       toast({
         title: "Success",
       });
@@ -87,7 +86,7 @@ const EditProduct = ({ params }: { params: { id: string } }) => {
       editData();
       console.log("Form submitted successfully!");
     } else {
-      console.log("Form has errors. Please correct them.");
+      alert("Form has errors. Please correct them.");
     }
   };
 
@@ -96,8 +95,6 @@ const EditProduct = ({ params }: { params: { id: string } }) => {
       setIsLoading(true);
       try {
         const data = await fetchDetailProduct(params.id);
-
-        console.log(data);
 
         setName(data.name);
         setDescription(data.description);

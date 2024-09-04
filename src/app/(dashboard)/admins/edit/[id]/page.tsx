@@ -39,7 +39,6 @@ const EditAdmin = ({ params }: { params: { id: string } }) => {
         gender,
         password,
       });
-      console.log(res);
       toast({
         title: "Success",
       });
@@ -94,7 +93,7 @@ const EditAdmin = ({ params }: { params: { id: string } }) => {
       editData();
       console.log("Form submitted successfully!");
     } else {
-      console.log("Form has errors. Please correct them.");
+      alert("Form has errors. Please correct them.");
     }
   };
 
@@ -103,8 +102,6 @@ const EditAdmin = ({ params }: { params: { id: string } }) => {
       setIsLoading(true);
       try {
         const data = await fetchDetailAdmin(params.id);
-
-        console.log(data);
 
         setFirstName(data.firstName);
         setLastName(data.lastName);

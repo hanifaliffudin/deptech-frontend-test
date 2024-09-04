@@ -21,10 +21,7 @@ import React, { useEffect, useState } from "react";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import {
-  fetchDeleteTransaction,
-  fetchListTransactions,
-} from "@/app/api/transactions";
+import { fetchListTransactions } from "@/app/api/transactions";
 
 const ListTransactions = () => {
   const router = useRouter();
@@ -42,17 +39,6 @@ const ListTransactions = () => {
 
     getListTransactions();
   }, []);
-
-  const handleDelete = async (id: string) => {
-    try {
-      const res = await fetchDeleteTransaction(id);
-      setTimeout(() => {
-        location.reload();
-      }, 1000);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div className="px-4">
