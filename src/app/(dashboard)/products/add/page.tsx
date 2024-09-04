@@ -144,7 +144,7 @@ const AddProduct = () => {
             required
             name="picture"
             type="picture"
-            placeholder="Picture"
+            placeholder="https://yourimage.com"
             value={picture}
             onChange={(e) => setPicture(e.target.value)}
           />
@@ -155,7 +155,11 @@ const AddProduct = () => {
 
         <div>
           <Label>Category</Label>
-          <Select required onValueChange={(value) => setCategory(value)}>
+          <Select
+            disabled={!listCategories.length}
+            required
+            onValueChange={(value) => setCategory(value)}
+          >
             <SelectTrigger>
               <SelectValue placeholder="Category" />
             </SelectTrigger>
