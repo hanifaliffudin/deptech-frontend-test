@@ -178,6 +178,7 @@ const EditAdmin = ({ params }: { params: { id: string } }) => {
         <div>
           <Label>Gender</Label>
           <Select
+            required
             defaultValue={gender}
             onValueChange={(value) => setGender(value)}
           >
@@ -219,7 +220,7 @@ const EditAdmin = ({ params }: { params: { id: string } }) => {
             <span className="text-red-500 text-xs">{errors.password}</span>
           )}
         </div>
-        <Button>Submit</Button>
+        <Button type="submit">Submit</Button>
       </form>
       <Toaster />
     </div>

@@ -150,7 +150,7 @@ const AddAdmin = () => {
 
         <div>
           <Label>Gender</Label>
-          <Select onValueChange={(value) => setGender(value)}>
+          <Select required onValueChange={(value) => setGender(value)}>
             <SelectTrigger>
               <SelectValue placeholder="Gender" />
             </SelectTrigger>
@@ -190,7 +190,7 @@ const AddAdmin = () => {
             <span className="text-red-500 text-xs">{errors.password}</span>
           )}
         </div>
-        <Button>Submit</Button>
+        <Button type="submit">Submit</Button>
       </form>
       <Toaster />
     </div>
